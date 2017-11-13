@@ -7,7 +7,7 @@ const queryBucket = () => {
 
 	.done((response) => {
 
-	console.log(response.message.Contents.map())
+	response.message.Contents.map(images => $("body").append("<div><img src='https://s3-us-west-2.amazonaws.com/photo-bucket-tmp-prjct/${images.Key}'></div>"))
 
 	})
 
